@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+  box-sizing: border-box;
+  --card1-border: hsl(180, 62%, 55%);
+  --card2-border: hsl(0, 78%, 62%);
+  --card3-border: hsl(34, 97%, 64%);
+  --card4-border: hsl(212, 86%, 64%);
+  --greyish-blue: hsl(229, 6%, 66%);
+  --very-light-grey: hsl(0, 0%, 98%);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 95%);
+  font-size: 15px;
+}
+
+header {
+  padding: 5px 20px;
+  margin: 20px auto;
+}
+
+header p {
+  padding: 0 450px;
+  text-align: center;
+  align-items: center;
+  color: var(--greyish-blue);
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.light {
+  font-weight: lighter;
+  color: rgb(51, 51, 51);
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  border-top: 4px solid var(--card3-border);
+  border-radius: 5px;
+  width: 320px;
+  height: 220px;
+  background-color: var(--very-light-grey);
+  padding: 10px 20px;
+  filter: drop-shadow(0 0 0.3rem var(--greyish-blue));
+}
+
+.card img {
+  position: relative;
+  left: 220px;
+}
+
+.card p {
+  font-size: 90%;
+  color: var(--greyish-blue);
+}
+
+.card-begin {
+  margin-right: 70px;
+  border-color: var(--card1-border);
+}
+
+.card-end {
+  margin-left: 70px;
+  border-color: var(--card4-border);
+}
+
+.card-begin,
+.card-end {
+  transition: ease 0.3s;
+}
+
+.card-begin:hover,
+.card-end:hover {
+  margin-bottom: 12px;
+}
+
+.mid-cards {
+  margin-bottom: 30px;
+  border-color: var(--card2-border);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1120px) {
+  .cards {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header p {
+    padding: 0 100px;
+  }
+
+  .card-begin {
+    margin: 0 0 30px 0px;
+  }
+
+  .card-end {
+    margin-top: 30px;
+    margin-right: 70px;
+  }
+
+  header {
+    margin-bottom: 30px;
+  }
+}
